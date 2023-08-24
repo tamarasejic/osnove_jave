@@ -15,17 +15,20 @@ public class DZadatak1 {
         Scanner s = new Scanner(System.in);
         int num = 0;
         int sum = 0;
+        int sumBack = 0;
         String errorMessage = "";
         boolean limit100 = false;
 
         while (!limit100) {
             System.out.print("Enter number: ");
             num = s.nextInt();
-            sum = sum + num;
+            sumBack = sum;
+            sum = sumBack + num;
+
 
             if (sum >= 100){
                 limit100 = true;
-                errorMessage = "Limit exceeded! The program has ended. The calculated sum is " + sum + ".";
+                errorMessage = "Limit exceeded! The program has ended. The calculated sum is " + sumBack + ".";
             }
 
         }
